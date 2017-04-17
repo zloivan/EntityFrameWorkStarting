@@ -21,41 +21,7 @@ namespace EntityFraimwork
             } while (menuinput == 1 || menuinput==2 || menuinput==3|| menuinput==4 || menuinput == 5);
             
 
-            //context.MyEntities.Add(new MyEntity {FirstName ="Иван", LastName="Хомичков", Age =27});
-            //context.MyEntities.Add(new MyEntity { FirstName = "Владимир", LastName = "Хомичков", Age = 17 });
-            //context.MyEntities.Add(new MyEntity { FirstName = "Иван", LastName = "Хомичков", Age = 52 });
-            //context.MyEntities.Add(new MyEntity { FirstName = "Елена", LastName = "Хомичкова", Age = 22 });
-
-            //context.SaveChanges();
-            //var entitys = context.MyEntities.ToList();
-            //foreach (var item in entitys)
-            //{
-            //    Console.WriteLine($"{item.Id }.{item.FirstName}-{item.LastName} \t{item.Age}");
-            //}
-
-            //Console.WriteLine("Выберите Id челловека\n");
-            //int id = Convert.ToInt32(Console.ReadLine());
-            //var changeEntity = context.MyEntities.Find(id);
-            //Console.WriteLine("Введите изменения Имени\n");
-            //string name = Console.ReadLine();
-            //Console.WriteLine("Введите изменения фамилии\n");
-            //string SecondName = Console.ReadLine();
-            //Console.WriteLine("Введите изменения ввозраста\n");
-            //int ageChange = Convert.ToInt32(Console.ReadLine());
-            //changeEntity.FirstName = name;
-            //changeEntity.LastName = SecondName;
-            //changeEntity.Age = ageChange;
-
-            ////context.Entry(changeEntity).State = System.Data.Entity.EntityState.Modified;
-            ////context.Entry(new MyEntity { FirstName = "Petya", LastName = "Ivanov", Age = 15 }).State = System.Data.Entity.EntityState.Added;
-            ////context.MyEntities.(changeEntity);
-
-
-            //context.SaveChanges();
-            //foreach (var item in entitys)
-            //{
-            //    Console.WriteLine($"{item.Id }.{item.FirstName}-{item.LastName} \t{item.Age}");
-            //}
+            
 
 
         }
