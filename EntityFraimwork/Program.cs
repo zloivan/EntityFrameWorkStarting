@@ -45,7 +45,7 @@ namespace EntityFraimwork
             Console.WriteLine("Фамилия: ");
             newEntity.LastName = Console.ReadLine();
             Console.WriteLine("Возраст: ");
-            newEntity.Age = Convert.ToInt32(Console.ReadLine());
+            newEntity.Age = Convert.ToInt32(Console.ReadLine()); 
             using (MyModel db = new MyModel())
             {
                 if (newEntity == null)
