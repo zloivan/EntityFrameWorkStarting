@@ -30,14 +30,52 @@ namespace OneToMany
 
                 foreach (var item in products)
                 {
-                    Console.WriteLine("",
+                    Console.WriteLine("{0}.{1} - ({2}) - {3}",
                         item.Id,
                         item.Name,
                         item.Price,
                         item.Order!=null?item.Order.Customer:"No customer"
                         );
                 }
-                Console.WriteLine(new string('-',30));
+                Console.WriteLine(new string('-',40));
+
+                Console.ReadKey();
+
+                
+                Order order1 = new Order { Customer = "Ivan", Quantity = 3, Product = new List<Product> {product1,product3,product5}};
+                Order order2 = new Order {Customer="Lena",Quantity=2, Product= new List<Product> {product4,product2 } };
+
+                db.Orders.AddRange(new List<Order> {order1,order2});
+
+                db.SaveChanges();
+                foreach (var item in products)
+                {
+                    Console.WriteLine("{0}.{1} - ({2}) - {3}",
+                        item.Id,
+                        item.Name,
+                        item.Price,
+                        item.Order != null ? item.Order.Customer : "No customer"
+                        );
+                }
+                Console.WriteLine(new string('-', 40));
+
+                Console.ReadKey();
+
+                var orders = db.Orders.ToList();
+                //Order:
+                foreach (var OrderItem in orders)
+                {
+                    Console.WriteLine("{0}.{1}",
+                        OrderItem.Id,
+                        OrderItem.Customer
+                        );
+                    if (OrderItem.Product == null) continue;
+                    foreach (var productItem in OrderItem.Product)
+                    {
+                        Console.WriteLine("Продукт:{0}({1})*{2}={3}",productItem.Name,productItem.Price,OrderItem.Quantity,OrderItem.Quantity*productItem.Price);
+                    }
+
+                }
 
             }
         }
