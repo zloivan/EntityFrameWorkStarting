@@ -10,6 +10,17 @@ namespace DataContext
     {
         static void Main(string[] args)
         {
+            using (DataModel db = new DataModel())
+            {
+               var companies = db.Companies.ToList();
+
+                foreach (var item in companies)
+                {
+
+                    Console.WriteLine($"{item.Id}.{item.Name}");
+                }
+            }
+
         }
     }
 }
