@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{550689D9-5238-4F4F-B16C-9BD94928FC2F}</ProjectGuid>
+    <ProjectGuid>{A60225A8-D9F5-4FD6-9445-9FAACDAD7EEC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LinqToEntityes</RootNamespace>
-    <AssemblyName>LinqToEntityes</AssemblyName>
+    <RootNamespace>Intro</RootNamespace>
+    <AssemblyName>Intro</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,13 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataContext\DataContext.csproj">
+      <Project>{035b41d5-5c65-467c-907a-fda52d1de070}</Project>
+      <Name>DataContext</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
